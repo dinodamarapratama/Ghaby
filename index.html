@@ -23,6 +23,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 		</script>
 <!--start-smoth-scrolling-->
+ <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		
+		 <script type="text/javascript" charset="utf-8">
+
+
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+      
+        function onDeviceReady() {
+       
+        }
+        
+        
+        
+ 
+function doClose() {
+		navigator.notification.confirm(
+			'Keluar dari Aplikasi?',
+			exitApp,
+			'Fuzzy HWR',
+			'Ok,Cancel'
+		);
+	}
+	
+	function exitApp(buttonIndex) {
+			if (buttonIndex == 1) {
+			navigator.app.exitApp();
+			}
+		else {
+			window.close();
+		}
+	}
+	
+
+        </script>
 </head>
 <body>
 	
